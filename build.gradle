@@ -1,0 +1,22 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.5.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile "org.springframework.integration:spring-integration-stream"
+	compile "org.springframework.integration:spring-integration-ip"
+	compile "org.springframework.boot:spring-boot-starter-integration"
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-stream', version: '2.2.0.RELEASE'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
